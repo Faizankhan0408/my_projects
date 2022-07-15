@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "430758024014",
+    "firebase_url": "https://tech-chat-3024e-default-rtdb.firebaseio.com",
+    "project_id": "tech-chat-3024e",
+    "storage_bucket": "tech-chat-3024e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430758024014:android:a95c8296e7076f6758841f",
+        "android_client_info": {
+          "package_name": "com.faizansocialmediaproject.bottomnavigationproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430758024014-ef8l3j6r9jv9g268v0oa4smftvv2nqik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8VmMY5IoUo1-PPRo1BQLIc15oO5vLEjU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430758024014-ef8l3j6r9jv9g268v0oa4smftvv2nqik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430758024014:android:2f657d08acf1338658841f",
+        "android_client_info": {
+          "package_name": "com.faizansocialmediaproject.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430758024014-ef8l3j6r9jv9g268v0oa4smftvv2nqik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8VmMY5IoUo1-PPRo1BQLIc15oO5vLEjU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430758024014-ef8l3j6r9jv9g268v0oa4smftvv2nqik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
