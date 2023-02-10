@@ -36,7 +36,6 @@ class LoginActivity : AppCompatActivity() {
 
     private fun onClicks() {
         binding.txtBackSignup.setOnClickListener {
-            GLobalVariable.UserId=auth.uid.toString()
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }

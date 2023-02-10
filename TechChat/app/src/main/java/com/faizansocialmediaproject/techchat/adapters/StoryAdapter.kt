@@ -1,6 +1,7 @@
 package com.faizansocialmediaproject.techchat.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.faizansocialmediaproject.techchat.Models.UserStoryModel
 import com.faizansocialmediaproject.techchat.R
+import com.faizansocialmediaproject.techchat.ShowStoryActivity
+import com.faizansocialmediaproject.techchat.Tools.GLobalVariable
 
 class StoryAdapter(private val storyList: List<UserStoryModel>, private val context: Context) :
     RecyclerView.Adapter<StoryAdapter.ViewHolder>() {
@@ -27,6 +30,11 @@ class StoryAdapter(private val storyList: List<UserStoryModel>, private val cont
       val model =storyList[position]
         holder.txt_userName.text=model.userName
         Glide.with(context).load(model.userProfileUrl).placeholder(R.drawable.ic_person).into(holder.img_story)
+        holder.img_story.setOnClickListener {
+            val intent=Intent(context,ShowStoryActivity::class.java)
+            intent.putExtra(GLobalVariable.INTENT_STORY_DATA,model)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

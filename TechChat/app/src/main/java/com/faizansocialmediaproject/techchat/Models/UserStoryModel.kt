@@ -1,9 +1,13 @@
 package com.faizansocialmediaproject.techchat.Models
 
+import java.io.Serializable
+
 data class UserStoryModel(
-    val userId: String, val userStoryUrl: String,
-    val userName: String,
-    val userProfileUrl: String
-) {
+    var userId: String="",
+    var userStoryUrl: String="",
+    var userName: String="",
+    var userProfileUrl: String="",
+    var postedAt :Long =0
+) : Serializable{
 
 }

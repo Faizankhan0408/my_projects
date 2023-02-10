@@ -8,7 +8,6 @@ import android.util.Log
 import android.widget.Toast
 import com.faizansocialmediaproject.techchat.MainActivity
 import com.faizansocialmediaproject.techchat.Models.UserDataModel
-import com.faizansocialmediaproject.techchat.R
 import com.faizansocialmediaproject.techchat.Tools.GLobalVariable
 import com.faizansocialmediaproject.techchat.databinding.ActivitySignupBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -22,8 +21,8 @@ class SignupActivity : AppCompatActivity() {
     lateinit var binding : ActivitySignupBinding
    lateinit var auth : FirebaseAuth
 
-   lateinit var email : String
-   lateinit var password : String
+   private lateinit var email : String
+  private lateinit var password : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +54,6 @@ class SignupActivity : AppCompatActivity() {
                         userDataModel = UserDataModel(user.uid)
                         getValuesFromView()
                         userDataModel.userId=user.uid
-                        GLobalVariable.UserId=user.uid
                     }
                     saveDataToDatabase()
                 } else {
@@ -70,7 +68,7 @@ class SignupActivity : AppCompatActivity() {
     private fun saveDataToDatabase() {
         val firebase = Firebase.database
         val reference =firebase.getReference(GLobalVariable.DATABASE_NAME)
-        reference.child(GLobalVariable.UserId).child(GLobalVariable.USER_PROFILE_DETAIL).setValue(userDataModel).addOnCompleteListener{
+        reference.child(auth.uid.toString()).child(GLobalVariable.USER_PROFILE_DETAIL).setValue(userDataModel).addOnCompleteListener{
             task->
             run {
                 if (task.isSuccessful) {
@@ -89,6 +87,6 @@ class SignupActivity : AppCompatActivity() {
     private fun getValuesFromView() {
         userDataModel.userName=(binding.edtUserName.editText?.text.toString())
         userDataModel.userEmail=(binding.edtUserEmail.editText?.text.toString())
-        userDataModel.userPassword=(binding.edtUserName.editText?.text.toString())
+        userDataModel.userPassword=(binding.edtUserPassword.editText?.text.toString())
     }
 }

@@ -7,7 +7,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:context=".Fragments.HomeFragment">
 
         <TextView
@@ -81,6 +81,29 @@
                         app:layout_constraintEnd_toEndOf="@id/img_story"
                         app:layout_constraintStart_toStartOf="@id/img_story"
                         app:layout_constraintTop_toBottomOf="@id/img_story" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:visibility="gone"
+                        android:id="@+id/img_story_replace"
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_person"
+                        app:civ_border_color="#FFFFFF"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_userName_replace"
+                        app:layout_constraintStart_toStartOf="@id/img_story"
+                        app:layout_constraintTop_toBottomOf="@id/img_story"
+                        app:layout_constraintEnd_toEndOf="@id/img_story"
+                        android:text=" Add story"/>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycle_story"

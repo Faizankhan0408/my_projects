@@ -3,10 +3,7 @@ package com.faizansocialmediaproject.techchat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.faizansocialmediaproject.techchat.Fragments.HomeFragment
-import com.faizansocialmediaproject.techchat.Fragments.NotificationFragment
-import com.faizansocialmediaproject.techchat.Fragments.SearchFragment
-import com.faizansocialmediaproject.techchat.Fragments.UserProfileFragment
+import com.faizansocialmediaproject.techchat.Fragments.*
 import com.faizansocialmediaproject.techchat.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,8 +15,8 @@ class MainActivity : AppCompatActivity() {
 
         val homeFragment = HomeFragment()
         val searchFragment = SearchFragment()
-        val notificationFragment = NotificationFragment()
         val userHomeFragment = UserProfileFragment()
+        val addPostFragment=AddPostFragment()
 
         setFragment(homeFragment)
 
@@ -27,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.menu_home->setFragment(homeFragment)
                 R.id.menu_search->setFragment(searchFragment)
-                R.id.menu_notification->setFragment(notificationFragment)
+                R.id.menu_add_post->setFragment(addPostFragment)
                 R.id.menu_profile->setFragment(userHomeFragment)
             }
             true

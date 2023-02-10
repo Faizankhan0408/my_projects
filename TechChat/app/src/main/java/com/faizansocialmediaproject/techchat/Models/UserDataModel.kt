@@ -1,7 +1,7 @@
 package com.faizansocialmediaproject.techchat.Models
 
 
-data class UserDataModel(var userId: String) {
+data class UserDataModel(var userId: String="") {
 
     var userName: String = ""
     var userEmail: String = ""
